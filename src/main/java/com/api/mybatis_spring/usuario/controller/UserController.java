@@ -15,14 +15,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
     @Autowired
     private UserService userService;
 
-    @GetMapping
+    @GetMapping("/listar")
     public ResponseEntity<?> listarTodos() {
         try {
-            List<User> userList = this.userService.listarTodos();
+            List<User> userList = userService.listarTodos();
             return ResponseEntity.ok().body(userList);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
