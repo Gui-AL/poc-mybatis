@@ -1,0 +1,5 @@
+<mapper namespace="com.api.mybatis_spring.usuario.repository.UserMapper">
+    <select id="listar" resultType="com.api.mybatis_spring.usuario.model.User">
+        SELECT * FROM usuario.tb_usuario
+    </select>
+</mapper>
