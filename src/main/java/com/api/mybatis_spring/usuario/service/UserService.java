@@ -18,6 +18,8 @@ public class UserService {
 
     public List<User> listarTodos() {
         System.out.println("Entrou");
+        System.out.println("listarTodos :" + userMapper.listarTodos());
+        System.out.println("Saiu");
         return userMapper.listarTodos();
     }
 

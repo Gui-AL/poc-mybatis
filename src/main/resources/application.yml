@@ -11,12 +11,9 @@ spring:
   liquibase:
     change-log: classpath:db/changelog-master.xml
     enabled: true
-  #output:
-   # ansi:
-    #  enabled: ALWAYS
 
-#mybatis:
-#mapper-locations: classpath:/mappers/*.xml
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
 
 server:
   max-http-request-header-size: 100KB
@@ -25,3 +22,7 @@ server:
   servlet:
     context-path: /api/
 
+logging:
+  level:
+    org.mybatis: TRACE
+    org.apache.ibatis: TRACE
