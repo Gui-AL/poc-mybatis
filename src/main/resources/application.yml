@@ -12,6 +12,14 @@ spring:
     ansi:
       enabled: ALWAYS
 
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v1/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
 server:
   max-http-request-header-size: 100KB
   port: 8080
