@@ -9,16 +9,16 @@ import java.time.LocalDateTime;
 @Data
 public class User {
 
-    @JsonProperty("usr_usuario")
+    @JsonProperty("id")
     private Integer id;
 
-    @JsonProperty("usr_nome")
+    @JsonProperty("nome")
     private String nome;
 
-    @JsonProperty("usr_ativo")
+    @JsonProperty("ativo")
     private String ativo;
 
-    @JsonProperty("usr_dt_created_at")
-    @JsonFormat(pattern="dd/MM/yyyy HH:mm:ss")
-    private LocalDateTime dataCriacao;
+    @JsonProperty("dataCriacao")
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+    private LocalDateTime dt_created_at;
 }

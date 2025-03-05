@@ -8,12 +8,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
-  liquibase:
-    change-log: classpath:db/changelog-master.xml
-    enabled: true
-
-mybatis:
-  mapper-locations: classpath:mappers/*.xml
+  output:
+    ansi:
+      enabled: ALWAYS
 
 server:
   max-http-request-header-size: 100KB
@@ -21,8 +18,3 @@ server:
   address: 0.0.0.0
   servlet:
     context-path: /api/
-
-logging:
-  level:
-    org.mybatis: TRACE
-    org.apache.ibatis: TRACE

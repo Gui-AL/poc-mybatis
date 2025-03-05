@@ -2,7 +2,6 @@ package com.api.mybatis_spring.usuario.repository;
 
 import com.api.mybatis_spring.usuario.model.User;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -10,4 +9,10 @@ import java.util.List;
 public interface UserMapper {
 
     List<User> listarTodos();
+
+    User listarPorId(Integer id);
+
+    List<User> listarPorFuncao();
+
+    List<User> listarComParams(String ativo, String nome);
 }

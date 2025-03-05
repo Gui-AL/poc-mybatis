@@ -1,5 +1,6 @@
 package com.api.mybatis_spring.usuario.service;
 
+import com.api.mybatis_spring.usuario.dto.UserListDTO;
 import com.api.mybatis_spring.usuario.model.User;
 import com.api.mybatis_spring.usuario.repository.UserMapper;
 import lombok.AllArgsConstructor;
@@ -17,10 +18,18 @@ public class UserService {
     private final UserMapper userMapper;
 
     public List<User> listarTodos() {
-        System.out.println("Entrou");
-        System.out.println("listarTodos :" + userMapper.listarTodos());
-        System.out.println("Saiu");
         return userMapper.listarTodos();
     }
 
+    public User listarPorId(Integer id) {
+        return userMapper.listarPorId(id);
+    }
+
+    public List<User> listarPorFuncao() {
+        return userMapper.listarPorFuncao();
+    }
+
+    public List<User> listarComParams(UserListDTO params) {
+        return userMapper.listarComParams(params.getAtivo(), params.getNome());
+    }
 }
